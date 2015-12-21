@@ -1,0 +1,19 @@
+{
+  "name": "flower_catalog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "supertest": "^1.1.0"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "author": "Abhishek Gupta",
+  "license": "ISC"
+}

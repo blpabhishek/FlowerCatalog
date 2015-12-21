@@ -1,0 +1,15 @@
+section {
+	display: inline-flex;
+}
+
+h1 {
+	color: orange;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+table{
+	font-size: 18px;
+}
