@@ -1,6 +1,6 @@
 var toRow = function(entry){
-	var time = new Date(entry.time);
-	var represent = [time.toLocaleTimeString(),time.toDateString()].join(' ');
+	var time = new Date(entry.stamp);
+	var represent = [time.toDateString()].join(' ');
 	return ['<tr>','<td>',represent,'</td>','<td>',entry.name, '</td>','<td>', entry.comment, '</td>','</tr>'].join(' ');
 };
 var generateTable = function(comments){
@@ -18,6 +18,7 @@ var postComment = function(){
 	var posting = $.post('comment',{name:name,comment:comment});
 	posting.done(function(data){
 		var comments = JSON.parse(data);
+		console.log(comments);
 	   	$('#comments').html(generateTable(comments));
 		$('input[name="name"]').val('');
  		$('textarea[name="comment"]').val('');
